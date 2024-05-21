@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Lock Screen{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Screen Locked</h1>
+    <p>Please enter your password to unlock the screen:</p>
+    <form method="POST" action="/unlock-screen">
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Unlock Screen</button>
+    </form>
+</div>
+{% endblock %}
